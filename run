@@ -1,0 +1,11 @@
+#! /bin/bash
+
+# Remove currently problematic script that point to subl binary
+sudo rm /usr/bin/subl
+
+# Create link to subl binary
+sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/bin/subl
+
+# Set up with git
+git config --global core.editor "subl --wait"
+
