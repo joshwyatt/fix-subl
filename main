@@ -6,6 +6,9 @@ sudo rm /usr/bin/subl
 # Create link to subl binary
 sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/bin/subl
 
+# Change .gitconfig editor to subl
+sed -e 's/nano/subl/' -e 's/vim/subl/' -e 's/nano/subl/' ~/.gitconfig > ~/tmp.gitconfig && mv ~/tmp.gitconfig ~/.gitconfig
+
 # Set up with git
 git config --global core.editor "subl --wait"
 
